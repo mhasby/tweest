@@ -1,5 +1,28 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div.navbar.navbar-inverse.navbar-fixed-top
+    div.navbar-inner
+        div.container
+            a.brand tweest
+            div.nav-collapse.collapse
+                ul.nav
+                    li.active 
+                        a home
+                    li
+                        a about
+  div.container
+    div.hero-unit
+        h1= title
+        p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
+    
+    div.row
+        div.span4
+            h2= user[0]['screen_name']
+            p= tweet[0]
+        div.span4
+            h2= user[1]['screen_name']
+            p= tweet[1]
+        div.span4
+            h2= user[2]['screen_name']
+            p= tweet[2]
